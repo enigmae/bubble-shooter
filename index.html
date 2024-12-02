@@ -68,6 +68,37 @@
             background: rgba(255,255,255,0.7);
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
+        .gameplay-preview {
+            margin: 50px 0;
+            padding: 30px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+        .gameplay-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin: 30px 0;
+        }
+        .gameplay-feature {
+            padding: 20px;
+            border: 2px solid #3498db;
+            border-radius: 10px;
+            background: rgba(52,152,219,0.1);
+        }
+        .how-to-play {
+            text-align: left;
+            margin: 30px 0;
+        }
+        .how-to-play ol {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .how-to-play li {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
         .cta-button {
             display: inline-block;
             padding: 15px 30px;
@@ -118,6 +149,39 @@
                 <p>New puzzles daily</p>
             </div>
         </div>
+
+        <div class="gameplay-preview">
+            <h2>Gameplay Preview</h2>
+            <div class="gameplay-grid">
+                <div class="gameplay-feature">
+                    <h3>🎮 Strategic Shooting</h3>
+                    <p>Aim and shoot bubbles strategically to create matches and clear the board</p>
+                </div>
+                <div class="gameplay-feature">
+                    <h3>🌈 Color Matching</h3>
+                    <p>Match three or more bubbles of the same color to make them pop</p>
+                </div>
+                <div class="gameplay-feature">
+                    <h3>⚡ Power-ups</h3>
+                    <p>Collect and use special power-ups to clear difficult levels</p>
+                </div>
+                <div class="gameplay-feature">
+                    <h3>🏅 Score Multipliers</h3>
+                    <p>Chain reactions lead to bigger scores and epic celebrations</p>
+                </div>
+            </div>
+
+            <div class="how-to-play">
+                <h2>How to Play</h2>
+                <ol>
+                    <li><strong>Aim:</strong> Touch and drag to aim your bubble shooter at the target area</li>
+                    <li><strong>Match:</strong> Create groups of three or more bubbles of the same color</li>
+                    <li><strong>Pop:</strong> Watch as matching bubbles pop and disappear from the board</li>
+                    <li><strong>Strategy:</strong> Plan your shots to create chain reactions and clear more bubbles</li>
+                </ol>
+            </div>
+        </div>
+
         <a href="#" class="cta-button">Notify Me When It Launches</a>
         <p class="coming-soon">Coming soon to your favorite device</p>
     </div>
