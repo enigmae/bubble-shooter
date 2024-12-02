@@ -11,22 +11,62 @@
             font-family: Arial, sans-serif;
             background-color: #f0f8ff;
             color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
             text-align: center;
+            position: relative;
         }
+        .bubble-decoration {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: -1;
+        }
+        .bubble {
+            position: absolute;
+            border: 2px solid #3498db;
+            border-radius: 50%;
+            opacity: 0.3;
+        }
+        .bubble:nth-child(1) { width: 50px; height: 50px; top: 10%; left: 10%; }
+        .bubble:nth-child(2) { width: 30px; height: 30px; top: 20%; right: 20%; }
+        .bubble:nth-child(3) { width: 40px; height: 40px; bottom: 15%; left: 15%; }
+        .bubble:nth-child(4) { width: 25px; height: 25px; bottom: 25%; right: 10%; }
         h1 {
             color: #2c3e50;
-            font-size: 3em;
+            font-size: 3.5em;
             margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
         .description {
             font-size: 1.2em;
             line-height: 1.6;
             margin-bottom: 30px;
+            color: #34495e;
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .feature {
+            flex: 1;
+            max-width: 200px;
+            padding: 20px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.7);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         .cta-button {
             display: inline-block;
@@ -36,21 +76,50 @@
             text-decoration: none;
             border-radius: 25px;
             font-weight: bold;
-            transition: background-color 0.3s;
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         .cta-button:hover {
             background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.2);
+        }
+        .coming-soon {
+            margin-top: 20px;
+            font-style: italic;
+            color: #7f8c8d;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="bubble-decoration">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+        </div>
         <h1>🎯 Bubble Shooter</h1>
         <div class="description">
             <p>Get ready for the most addictive bubble-shooting experience ever!</p>
-            <p>Coming soon to your favorite device.</p>
+            <p>Match, pop, and conquer in this exciting new puzzle adventure.</p>
+        </div>
+        <div class="features">
+            <div class="feature">
+                <h3>📱 Cross-Platform</h3>
+                <p>Play anywhere, anytime</p>
+            </div>
+            <div class="feature">
+                <h3>🏆 Achievements</h3>
+                <p>Unlock rewards</p>
+            </div>
+            <div class="feature">
+                <h3>🌟 Daily Challenges</h3>
+                <p>New puzzles daily</p>
+            </div>
         </div>
         <a href="#" class="cta-button">Notify Me When It Launches</a>
+        <p class="coming-soon">Coming soon to your favorite device</p>
     </div>
 </body>
 </html>
